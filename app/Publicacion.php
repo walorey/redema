@@ -20,7 +20,7 @@ class Publicacion extends Model
 
     public function usuario()
     {
-    	return $this->belongsTo('App\User');
+    	return $this->belongsTo('App\User','id','id');
     }
 
     public function imagenes()
