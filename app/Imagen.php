@@ -12,6 +12,6 @@ class Imagen extends Model
 
     public function publicacion()
     {
-    	return $this->belongsTo('App\Publicacion');
+    	return $this->belongsTo('App\Publicacion','publicacion_id');
     }
 }

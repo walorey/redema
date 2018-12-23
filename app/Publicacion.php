@@ -14,13 +14,13 @@ class Publicacion extends Model
     //como es una relacion uno con muchos, el uno seria la categoria por eso la funcion se llama categoria en singular
 
     public function categoria()
-    {
-    	return $this->belongsTo('App\Categoria');
+    {	//como segundo parametro se pone la llave foranea
+    	return $this->belongsTo('App\Categoria','category_id');
     }
 
     public function usuario()
     {
-    	return $this->belongsTo('App\User','id','id');
+    	return $this->belongsTo('App\User','user_id');
     }
 
     public function imagenes()
@@ -30,6 +30,6 @@ class Publicacion extends Model
 
     public function tags()
     {
-    	return $this->belongsToMany('App\Tag');
+    	return $this->belongsToMany('App\Tag','publicacion_tag','publicacion_id','tag_id');
     }
 }
