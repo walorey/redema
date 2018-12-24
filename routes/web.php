@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome');//no hace falta poner welcome.blade.php, si esta dentro de una carpeta se usa '.' en vez de '/' aunque tambien se puede
+
+Route::group(['prefix'=>'publicaciones'], function(){
+
+	Route::get('view/{id}',[
+		'uses' => 'TestController@view',
+		'as' => 'publicacionesView'
+	]);
+
 });
