@@ -30,6 +30,8 @@ class Publicacion extends Model
 
     public function tags()
     {
-    	return $this->belongsToMany('App\Tag','publicacion_tag','publicacion_id','tag_id');
+    	return $this->belongsToMany('App\Tag');
     }
 }
+
+//$publicacion->tags()->attach(1) attach recibe como parametro el id o la variable donde se encuentra el tag

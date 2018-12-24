@@ -12,6 +12,6 @@ class Tag extends Model
 
     public function publicaciones()
     {
-    	return $this->belongsToMany('App\Publicacion','publicacion_tag','tag_id','publicacion_id');
+    	return $this->belongsToMany('App\Publicacion');
     }
 }
