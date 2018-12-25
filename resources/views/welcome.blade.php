@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <h1>Hola esto es River</h1>
-    <a href="" class="btn btn-success">Ganar copa</a>
+    <!-- <h1>Hola esto es River</h1>
+    <a href="" class="btn btn-success">Ganar copa</a> -->
 @endsection('content')
 

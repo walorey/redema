@@ -18,7 +18,7 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario <span class="glyphicon glyphicon-star estrella-admin" aria-hidden="true"></span> <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#212121;background-color:  #757575;" role="button" aria-haspopup="true" aria-expanded="false">Usuario <span class="glyphicon glyphicon-star estrella-admin" aria-hidden="true"></span> <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#" class="opciones-de-usuario"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Panel administrativo </a></li>
             <li><a href="#" class="opciones-de-usuario"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Perfil </a></li>
@@ -37,7 +37,17 @@
           <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
         </button>
       </div>
-
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<div class="collapse navbar-collapse center-block" id="bs-example-navbar-collapse-1" style="background-color: #BDBDBD;">
+  <ul class="nav navbar-nav lista-de-datos" >
+    <li><a href="#">Usuarios</a></li>
+    <li><a href="#">Publicaciones</a></li>
+    <li><a href="#">Comentarios</a></li>
+    <li><a href="#">Imagenes</a></li>
+    <li><a href="#">Categorías</a></li>
+    <li><a href="#">Tags</a></li>
+  </ul>
+</div>

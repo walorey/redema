@@ -1,6 +1,7 @@
 .contenedor-barra{
 	background-color: #757575 !important;
 	border-color: #757575!important;
+	margin-bottom: 0px !important;
 }
 
 @media (min-width: 768px){
@@ -20,5 +21,10 @@
 	}
 	.contenedor-barra{
 		border-radius: 0 !important;
+	}
+
+	ul.lista-de-datos{
+		margin-left: 29%;
+    	margin-right: 25%;
 	}
 }
