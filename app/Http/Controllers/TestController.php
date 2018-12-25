@@ -15,6 +15,6 @@ class TestController extends Controller
     	$publicacion->usuario;
     	$publicacion->tags;
     	
-    	dd($publicacion);
+    	return view('test.index', ['publicacion' => $publicacion]);
     }
 }
