@@ -1,0 +1,24 @@
+.contenedor-barra{
+	background-color: #757575 !important;
+	border-color: #757575!important;
+}
+
+@media (min-width: 768px){
+	.notificaciones-admin{
+		margin-top: 8px;
+	}
+
+	input.buscador-admin{
+		width: 280px !important;
+	}
+
+	form.buscador-admin{
+		margin-left: 265px;
+	}
+	.ico-opciones-de-usuario{
+		float: right;
+	}
+	.contenedor-barra{
+		border-radius: 0 !important;
+	}
+}

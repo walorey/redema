@@ -3,7 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>@yield('title' , 'Defecto')| Panel de administración</title>
+	<link rel="stylesheet" href="{{ asset('css/admin/barra.css')}}">
 	<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}">
+
 </head>
 <body>
 
