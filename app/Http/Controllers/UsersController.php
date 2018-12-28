@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 
+
 class UsersController extends Controller
 {
     /**
@@ -15,7 +16,7 @@ class UsersController extends Controller
     public function index()
     {
        $usuarios = User::orderBy('id', 'ASC')->paginate(10);
-       
+
        return view('admin.usuarios.index')->with('usuarios', $usuarios);
     }
 
@@ -43,7 +44,10 @@ class UsersController extends Controller
         $usuario->password = bcrypt($request->password);
         $usuario->save();
 
-        return view('admin.usuarios.creado');
+        flash("Se ha registrado con existo al usuario" .$usuario->name.' '.$usuario->lastname)->success();
+
+        return redirect()->route('Usuarios.index');
+       
     }
 
     /**

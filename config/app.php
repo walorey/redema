@@ -176,7 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         // providers personales(puede que falte uno, pero yo lo instale por consola y segun el video no es necesario)
-        Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
+        Cviebrock\EloquentSluggable\SluggableServiceProvider::class
     ],
 
 
@@ -227,6 +227,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /*
+        ** Aliases Personales
+        */
 
     ],
 
