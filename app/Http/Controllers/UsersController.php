@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class UsersController extends Controller
 {
@@ -36,7 +37,11 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $usuario = new User($request->all());
+        $usuario->password = bcrypt($request->password);
+        $usuario->save();
+
+        return view('admin.usuarios.creado');
     }
 
     /**
