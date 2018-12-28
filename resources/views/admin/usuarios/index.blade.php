@@ -19,10 +19,21 @@
 	  				<td>{{$usuario->name}}</td>
 	  				<td>{{$usuario->lastname}}</td>
 	  				<td>{{$usuario->email}}</td>
-	  				<td>{{$usuario->type}}</td>
-	  				<td>hola</td>
+	  				<td>
+	  					@if($usuario->type == "admin")
+	  						<span class="label label-danger">{{$usuario->type}}</span>
+	  					@else
+	  						<span class="label label-primary">{{$usuario->type}}</span>
+	  					@endif
+	  					
+	  				</td>
+	  				<td>
+	  					<a href="" class="btn btn-danger" title="Eliminar"><span class="glyphicon glyphicon-remove"></span></a>
+	  					<a href="" class="btn btn-warning" title="Editar"><span class="glyphicon glyphicon-pencil"></span></a>
+	  				</td>
   				</tr>
   			@endforeach
   		</tbody>
 	</table>
+	{!! $usuarios->render()!!}
 @endsection
