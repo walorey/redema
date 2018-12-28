@@ -175,7 +175,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // providers personales(puede que falte uno, pero yo lo instale por consola y segun el video no es necesario)
+        Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
     ],
+
+
 
     /*
     |--------------------------------------------------------------------------

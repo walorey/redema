@@ -18,7 +18,7 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#212121;background-color:  #757575;" role="button" aria-haspopup="true" aria-expanded="false">Usuario <span class="glyphicon glyphicon-star estrella-admin" aria-hidden="true"></span> <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#212121;background-color:  #757575;" role="button" aria-haspopup="true" aria-expanded="false">Usuario  <span class="glyphicon glyphicon-star estrella-admin" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Eres un administrador"></button> <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#" class="opciones-de-usuario"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Panel administrativo </a></li>
             <li><a href="#" class="opciones-de-usuario"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Perfil </a></li>

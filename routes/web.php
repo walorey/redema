@@ -14,11 +14,10 @@
 Route::get('/', function () {
     return view('welcome');//no hace falta poner welcome.blade.php, si esta dentro de una carpeta se usa '.' en vez de '/' aunque tambien se puede
 });
-Route::group(['prefix'=>'publicaciones'], function(){
 
-	Route::get('view/{id}',[
-		'uses' => 'TestController@view',
-		'as' => 'publicacionesView'
-	]);
+Route::group(['prefix'=>'Admin'], function(){
+
+	//averiguar como hacer que se llame la ruta crear en vez de create
+	Route::resource('Usuarios','UsersController');
 
 });
