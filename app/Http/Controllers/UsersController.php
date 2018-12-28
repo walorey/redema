@@ -92,6 +92,12 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usuario = User::find($id);
+        $usuario->delete();
+
+        flash("Se ha eliminado con existo al usuario" .' '.$usuario->name.' '.$usuario->lastname)->error();
+
+        return redirect()->route('Usuarios.index');
+
     }
 }

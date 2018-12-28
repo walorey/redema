@@ -19,5 +19,9 @@ Route::group(['prefix'=>'Admin'], function(){
 
 	//averiguar como hacer que se llame la ruta crear en vez de create
 	Route::resource('Usuarios','UsersController');
+	Route::get('Usuarios/{id}/destroy', [
+		'uses' => 'UsersController@destroy',
+		'as' => 'Usuarios.destroy'
+	]);
 
 });
