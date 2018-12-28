@@ -44,7 +44,7 @@ class UsersController extends Controller
         $usuario->password = bcrypt($request->password);
         $usuario->save();
 
-        flash("Se ha registrado con existo al usuario" .$usuario->name.' '.$usuario->lastname)->success();
+        flash("Se ha registrado con existo al usuario" .' '.$usuario->name.' '.$usuario->lastname)->success();
 
         return redirect()->route('Usuarios.index');
        
