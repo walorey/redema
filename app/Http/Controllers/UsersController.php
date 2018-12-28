@@ -44,7 +44,7 @@ class UsersController extends Controller
         $usuario->password = bcrypt($request->password);
         $usuario->save();
 
-        flash("Se ha registrado con existo al usuario" .' '.$usuario->name.' '.$usuario->lastname)->success();
+        flash("Se ha registrado con existo al usuario" .' '.$usuario->name.' '.$usuario->lastname)->success()->important();
 
         return redirect()->route('Usuarios.index');
        
@@ -95,7 +95,7 @@ class UsersController extends Controller
         $usuario = User::find($id);
         $usuario->delete();
 
-        flash("Se ha eliminado con existo al usuario" .' '.$usuario->name.' '.$usuario->lastname)->error();
+        flash("Se ha eliminado con existo al usuario" .' '.$usuario->name.' '.$usuario->lastname)->error()->important();
 
         return redirect()->route('Usuarios.index');
 
