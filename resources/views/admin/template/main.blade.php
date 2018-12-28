@@ -19,9 +19,7 @@
 	</div>
 
 
-	<!-- <footer class="footer-admin">
-		© 2018, Reddema, Todos los derechos reservados
-	</footer> -->
+	
 
 	<script src="{{ asset('plugins/jquery/js/jquery-3.3.1.js') }}"></script>
 	<script src="{{ asset('plugins/bootstrap/js/bootstrap.js') }}"></script>

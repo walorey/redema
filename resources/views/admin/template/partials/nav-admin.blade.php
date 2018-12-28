@@ -43,7 +43,7 @@
 
 <div class="collapse navbar-collapse center-block" id="bs-example-navbar-collapse-1" style="background-color: #BDBDBD;">
   <ul class="nav navbar-nav lista-de-datos" >
-    <li><a href="#">Usuarios</a></li>
+    <li><a href="{{ route('Usuarios.index')}}">Usuarios</a></li>
     <li><a href="#">Publicaciones</a></li>
     <li><a href="#">Comentarios</a></li>
     <li><a href="#">Imagenes</a></li>
