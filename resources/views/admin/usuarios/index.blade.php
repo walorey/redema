@@ -32,7 +32,7 @@
 	  				</td>
 	  				<td>
 	  					<a href="{{ route('Usuarios.destroy', $usuario->id) }}" class="btn btn-danger" onclick="return confirm('Estas seguro que deseas eliminarlo?')" title="Eliminar"><span class="glyphicon glyphicon-remove" ></span></a>
-	  					<a href="" class="btn btn-warning" title="Editar"><span class="glyphicon glyphicon-pencil"></span></a>
+	  					<a href="{{ route('Usuarios.edit', $usuario->id)}}" class="btn btn-warning" title="Editar"><span class="glyphicon glyphicon-pencil"></span></a>
 	  				</td>
   				</tr>
   			@endforeach

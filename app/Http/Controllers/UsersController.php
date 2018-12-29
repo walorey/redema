@@ -69,7 +69,9 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $usuario = User::find($id);
+
+        return view('admin.usuarios.editar')->with('usuario',$usuario);
     }
 
     /**
@@ -81,7 +83,15 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $usuario = User::find($id);
+        $usuario->name = $request->name;
+        $usuario->email = $request->email;
+        $usuario->type = $request->type;
+        $usuario->save();
+
+        flash("Se ha editado con existo al usuario" .' '.$usuario->name.' '.$usuario->lastname)->error()->warning()->important();
+
+        return redirect()->route('Usuarios.index');
     }
 
     /**
