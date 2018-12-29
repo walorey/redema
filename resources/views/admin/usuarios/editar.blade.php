@@ -11,19 +11,27 @@
 	
 	<div class="form-group">
 		<label class="exampleInputName">Nombre</label>
-		<input type="text" class="form-control" name="name" placeholder="" required>
+		<input type="text" class="form-control" name="name" value="{{ $usuario->name }}" required>
 	</div>
 	<div class="form-group">
 		<label class="exampleInputName">Apellido</label>
-		<input type="text" class="form-control" name="lastname" placeholder="" required>
+		<input type="text" class="form-control" name="lastname" value="{{ $usuario->lastname }}" required>
 	</div>
 	<div class="form-group">
 		<label for="exampleInputEmail1">Email</label>
-		<input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="" required>
+		<input type="email" class="form-control" id="exampleInputEmail1" name="email" value="{{ $usuario->email }}" required>
 	</div>
 	<div class="form-group">
 		<label class="exampleInputName">Seleccione un tipo</label>
-		{!! Form::select('type', ['' => 'Seleccionar un tipo', 'member' => 'Miembro', 'admin' => 'Administrador'], null, ['class' => 'form-control'])!!}
+		<select class="form-control" name="type">
+			@if($usuario->type == 'admin')
+				<option value="admin">Administrador</option>
+				<option value="member">Miembro</option>
+			@else
+				<option value="member">Miembro</option>
+				<option value="admin">Administrador</option>
+			@endif
+		</select>
 	</div>
 	<button type="submit" class="btn btn-default">Crear</button>
 	
