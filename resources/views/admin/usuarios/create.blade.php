@@ -2,21 +2,8 @@
 
 @section('title','Crea usuario | Panel de administración')
 
+@section('Encabezado','Crear usuario')
 @section('content')
-
-<h1>Crear usuario</h1>
-
-	@if(count($errors) > 0)
-	<div class="alert alert-danger" role="alert">
-		<ul>
-		@foreach($errors->all() as $error)
-			<li>
-				{{ $error }}
-			</li>
-		@endforeach	
-		</ul>
-	</div>
-	@endif
 
 {!! Form::open(['route' => 'Usuarios.store', 'method' => 'POST']) !!}
 

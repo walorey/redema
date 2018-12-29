@@ -25,6 +25,11 @@ Route::group(['prefix'=>'Admin'], function(){
 	]);
 
 	Route::resource('Categorias', 'CategoriesController');
+	Route::get('Categorias/{id}/destroy', [
+		'uses' => 'CategoriesController@destroy',
+		'as' => 'Categorias.destroy'
+	]);
+
 });
 
 //app/provider/appserviceprovider.php ahi cambie create por crear

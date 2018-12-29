@@ -1,6 +1,6 @@
 @extends('admin.template.main')
 
-@section('title','Editar usuario | Panel de administración')
+@section('title','Editar categoría | Panel de administración')
 
 @section('content')
 

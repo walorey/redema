@@ -12,11 +12,13 @@
 
 	@include('admin.template.partials.nav-admin')
 
-
+	
 
 	<div class="container">
+		<h1>@yield( 'Encabezado')</h1>
 		<br>
 		@include('flash::message')
+		@include('admin.template.partials.errores')
 		@yield('content')
 	</div>
 

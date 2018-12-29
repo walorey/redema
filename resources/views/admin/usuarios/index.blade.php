@@ -1,7 +1,7 @@
 @extends('admin.template.main')
 
 @section('title', 'Listado ')
-
+@section('Encabezado' , 'Lista de usuarios')
 @section('content')
 	<br>
 	<a href="{{ route('Usuarios.create')}}" class="btn btn-success">Registrar nuevo usuario</a>

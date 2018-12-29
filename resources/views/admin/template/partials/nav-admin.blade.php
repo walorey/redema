@@ -47,7 +47,7 @@
     <li><a href="#">Publicaciones</a></li>
     <li><a href="#">Comentarios</a></li>
     <li><a href="#">Imagenes</a></li>
-    <li><a href="#">Categorías</a></li>
+    <li><a href="{{ route('Categorias.index')}}">Categorías</a></li>
     <li><a href="#">Tags</a></li>
   </ul>
 </div>
