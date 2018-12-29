@@ -33,7 +33,7 @@
 			@endif
 		</select>
 	</div>
-	<button type="submit" class="btn btn-default">Crear</button>
+	<button type="submit" class="btn btn-default">Guardar</button>
 	
 {!! Form::close() !!}
 

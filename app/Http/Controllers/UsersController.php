@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
-
+use App\Http\Requests\UserRequest;
 
 class UsersController extends Controller
 {
@@ -27,7 +27,6 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //averiguar como hacer que se llame la ruta crear en vez de create
 
         return view('admin.usuarios.create');
     }
@@ -38,13 +37,13 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
         $usuario = new User($request->all());
         $usuario->password = bcrypt($request->password);
         $usuario->save();
 
-        flash("Se ha registrado con existo al usuario" .' '.$usuario->name.' '.$usuario->lastname)->success()->important();
+        flash("Se ha registrado con éxito al usuario" .' '.$usuario->name.' '.$usuario->lastname)->success()->important();
 
         return redirect()->route('Usuarios.index');
        
@@ -89,7 +88,7 @@ class UsersController extends Controller
         $usuario->type = $request->type;
         $usuario->save();
 
-        flash("Se ha editado con existo al usuario" .' '.$usuario->name.' '.$usuario->lastname)->error()->warning()->important();
+        flash("Se ha editado con éxito al usuario" .' '.$usuario->name.' '.$usuario->lastname)->error()->warning()->important();
 
         return redirect()->route('Usuarios.index');
     }
@@ -105,7 +104,7 @@ class UsersController extends Controller
         $usuario = User::find($id);
         $usuario->delete();
 
-        flash("Se ha eliminado con existo al usuario" .' '.$usuario->name.' '.$usuario->lastname)->error()->important();
+        flash("Se ha eliminado con éxito al usuario" .' '.$usuario->name.' '.$usuario->lastname)->error()->important();
 
         return redirect()->route('Usuarios.index');
 

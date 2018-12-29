@@ -24,9 +24,9 @@
 	  				<td>{{$usuario->email}}</td>
 	  				<td>
 	  					@if($usuario->type == "admin")
-	  						<span class="label label-danger">{{$usuario->type}}</span>
+	  						<span class="label label-danger" title="Administrador">Administrador</span>
 	  					@else
-	  						<span class="label label-primary">{{$usuario->type}}</span>
+	  						<span class="label label-primary" title="Miembro">Miembro</span>
 	  					@endif
 	  					
 	  				</td>

@@ -5,7 +5,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <a class="navbar-left" href="#"><img src="{{ asset('img/admin/reddema.png')}}"></a>
+      <a class="navbar-left" href="{{ route('Usuarios.index')}}"><img src="{{ asset('img/admin/reddema.png')}}"></a>
 
       <form class="navbar-form navbar-left buscador-admin">
         <div class="form-group">

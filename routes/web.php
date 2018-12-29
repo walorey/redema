@@ -23,5 +23,6 @@ Route::group(['prefix'=>'Admin'], function(){
 		'uses' => 'UsersController@destroy',
 		'as' => 'Usuarios.destroy'
 	]);
-
 });
+
+//app/provider/appserviceprovider.php ahi cambie create por crear
