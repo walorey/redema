@@ -5,7 +5,7 @@
 @section('content')
 <h1>Editar a {{$categoria->name}}</h1>
 
-{!! Form::open(['route' => 'Categorias.store', 'method' => 'POST']) !!}
+{!! Form::open(['route' => ['Categorias.update',$categoria], 'method' => 'PUT']) !!}
 
 	
 	<div class="form-group">
