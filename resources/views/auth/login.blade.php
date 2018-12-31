@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -10,8 +7,6 @@
     <meta name="author" content="">
     <link rel="icon" href="{{ asset('img/iconos/ico.png') }}">
 
-
-    <link rel="icon" href="ico.png">
 
     <title>Reddema, Red de Mascotas!</title>
 

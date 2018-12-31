@@ -2,7 +2,7 @@
 <nav class="navbar navbar-default barraprincipal">
   <div class="container-fluid">
     <div class="navbar-header">
-       <a class="navbar-brand logoinicio" href="index.php"><img src="img/reddema.png"></a>
+       <a class="navbar-brand logoinicio" href="/"><img src="img/reddema.png"></a>
     </div>
 
     <ul class="nav navbar-nav navbar-right">

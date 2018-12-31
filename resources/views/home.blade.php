@@ -21,3 +21,6 @@
     </div>
 </div>
 @endsection
+
+
+<!-- quiero poner que si el tipo del usuario es administrador me mande a la adminsitracion sino a un inicio -->
