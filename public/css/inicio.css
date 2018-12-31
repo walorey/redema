@@ -2,9 +2,19 @@ body{
 	background-color:  #bdbdbd;
 }
 
+.boton-inicio{
+	color: #F5F5F5;
+}
+.boton-inicio:hover{
+	text-decoration: none !important;
+	color: #F5F5F5;
+}
 
 .barraprincipal{
 	background-color: #607D8B !important;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	border-color: #607D8B !important;
 }
 .logoinicio{
 	padding-bottom: 0 !important;
