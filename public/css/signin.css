@@ -1,0 +1,72 @@
+
+
+body.iniciarsesion{
+  
+  background-image: url("https://c.pxhere.com/photos/91/0f/dog_mongrel_pets_no_breed-1215586.jpg!d");
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+body.registrarse{
+  background-image: url("https://c.pxhere.com/photos/c6/a9/monty_pet_buddy_cat_chum-96028.jpg!d");
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+
+
+}
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.formulariosesion{
+ margin-top: 60px;
+}
+
+.fuenteform{
+  color: #bdbdbd!important;
+}
+
+.botonform{
+  background-color: #f44336!important;
+  border-color: #f44336 !important;
+}
+
+.fuentformr{
+  background-color: #212121!important;
+  border-color: #212121!important;
+}
+
+.contrados{
+  margin-bottom: 0 !important;
+  border-radius: 1px !important;
+}

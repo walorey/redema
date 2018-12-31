@@ -6,8 +6,6 @@
 @section('content')
 
 {!! Form::open(['route' => 'Usuarios.store', 'method' => 'POST']) !!}
-{!! Form::open(['route' => 'Admin.auth.login', 'method' => 'POST']) !!}
-	
 	<div class="form-group">
 		<label class="exampleInputName">Nombre</label>
 		<input type="text" class="form-control" name="name" placeholder="" required>
