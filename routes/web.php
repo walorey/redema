@@ -33,3 +33,6 @@ Route::group(['prefix'=>'Admin'], function(){
 });
 
 //app/provider/appserviceprovider.php ahi cambie create por crear
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
