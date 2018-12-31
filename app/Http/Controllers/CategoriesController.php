@@ -82,7 +82,7 @@ class CategoriesController extends Controller
         $categoria->name = $request->name;
         $categoria->save();
 
-        flash("Se ha editado con éxito al categoria" .' '.$categoria->name)->error()->warning()->important();
+        flash("Se ha editado con éxito la categoria" .' '.$categoria->name)->error()->warning()->important();
 
         return redirect()->route('Categorias.index');
     }

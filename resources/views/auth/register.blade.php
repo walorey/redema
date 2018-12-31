@@ -30,6 +30,7 @@
 
                @csrf
                  <input placeholder="Nombre"  id="name" type="text" class=" sinbordes form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                 <!-- aca deberia tirar el error del nombre pero no lo esta tirando -->
 
                 @if ($errors->has('name'))
                     <span class="invalid-feedback" role="alert">
