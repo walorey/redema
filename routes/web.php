@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('index');//no hace falta poner welcome.blade.php, si esta dentro de una carpeta se usa '.' en vez de '/' aunque tambien se puede
 });
 
-Route::group(['prefix'=>'Admin'], function(){
+Route::group(['prefix'=>'Admin', 'middleware'=>'auth'], function(){
 
 	//averiguar como hacer que se llame la ruta crear en vez de create
 	Route::resource('Usuarios','UsersController');

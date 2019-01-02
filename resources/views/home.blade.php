@@ -14,7 +14,14 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    {!! $tipo=Auth::user()->type !!}
+
+                    You are logged in! 
+                    @if ($tipo=='admin')
+                        @return redirect('/Admin/Usuarios');
+                    @else 
+                        @return redirect('/home');
+                    @endif
                 </div>
             </div>
         </div>
