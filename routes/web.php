@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::group(['prefix'=>'Admin', 'middleware'=>'auth'], function(){
 
 	//averiguar como hacer que se llame la ruta crear en vez de create
+	//app/provider/appserviceprovider.php ahi cambie create por crear
 	Route::resource('Usuarios','UsersController');
 	Route::get('Usuarios/{id}/destroy', [
 		'uses' => 'UsersController@destroy',
@@ -30,9 +31,10 @@ Route::group(['prefix'=>'Admin', 'middleware'=>'auth'], function(){
 		'as' => 'Categorias.destroy'
 	]);
 
+
 });
 
-//app/provider/appserviceprovider.php ahi cambie create por crear
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
