@@ -25,15 +25,18 @@ class HomeController extends Controller
      */
     public function index()
     {   
-        if (Auth::user()->type=='admin') {
-            $usuarios = User::orderBy('id', 'ASC')->paginate(10);
+        // if (Auth::user()->type=='admin') {
+        //     $usuarios = User::orderBy('id', 'ASC')->paginate(10);
 
-            return view('admin.usuarios.index')->with('usuarios', $usuarios);
-        }
-        else{
-          return view('home');  
-        }
+        //     return view('admin.usuarios.index')->with('usuarios', $usuarios);
+        // }
+        // else{
+        //   return view('home');  
+        // }
         
+        $usuarios = User::orderBy('id', 'ASC')->paginate(10);
+
+        return view('admin.usuarios.index')->with('usuarios', $usuarios);
        
     }
 }

@@ -31,10 +31,34 @@ Route::group(['prefix'=>'Admin', 'middleware'=>'auth'], function(){
 		'as' => 'Categorias.destroy'
 	]);
 
+	Route::resource('Tags', 'TagsController');
+	Route::get('Tags/{id}/destroy', [
+		'uses' => 'TagsController@destroy',
+		'as' => 'Tags.destroy'
+	]);
+
+	Route::resource('Publicaciones', 'PublicacionesController');
 
 });
 
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//para iniciar como administrador
+
+Route::get('/Admin', 'HomeController@index');
+
+Route::get('Admin/auth/login', [
+    'uses'  => 'Auth\LoginController@showLoginForm',
+    'as'    => 'Admin.auth.login'
+]);
+
+Route::post('Admin/auth/login', [
+    'uses'  => 'Auth\LoginController@login',
+    'as'    => 'Admin.auth.login'
+]);
+
+Route::get('Admin/auth/logout', [
+    'uses'  => 'Auth\LoginController@logout',
+    'as'    => 'Admin.auth.logout'
+]);
