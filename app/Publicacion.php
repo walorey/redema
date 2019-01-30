@@ -44,6 +44,11 @@ class Publicacion extends Model
             ]
         ];
     }
+
+    public function scopeSearch($query, $title)
+    {
+        $query->where('title', 'LIKE', '%'.$title.'%');
+    }
 }
 
 //$publicacion->tags()->attach(1) attach recibe como parametro el id o la variable donde se encuentra el tag

@@ -17,15 +17,13 @@ class PublicacionesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {   $publicaciones = Publicacion::orderBy('id', 'DESC')->paginate(5);
+    public function index(Request $request)
+    {   $publicaciones = Publicacion::Search($request->title)->orderBy('id', 'DESC')->paginate(5);
         $publicaciones->each(function($publicaciones){
             $publicaciones->categoria;
             $publicaciones->usuario;
         });
-
-        dd($publicaciones);
-        return view('admin.publicaciones.index');
+        return view('admin.publicaciones.index')->with('publicaciones',$publicaciones);
     }
 
     /**
@@ -95,8 +93,19 @@ class PublicacionesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    {   
+        $publicacion = Publicacion::find($id);
+        $publicacion->categoria;
+        $categorias = Categoria::orderBy('name', 'DESC')->pluck('name','id');
+        $tags = Tag::orderBy('name', 'DESC')->pluck('name','id');
+
+        $mis_tags = $publicacion->tags->pluck('id')->ToArray();
+
+        return view('admin.publicaciones.editar')
+            ->with('categorias',$categorias)
+            ->with('publicacion',$publicacion)
+            ->with('tags',$tags)
+            ->with('mis_tags',$mis_tags);
     }
 
     /**
@@ -108,7 +117,15 @@ class PublicacionesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $publicacion = Publicacion::find($id);
+        $publicacion->fill($request->all());
+        $publicacion->save();
+
+        $publicacion->tags()->sync($request->tags);
+
+        flash("Se ha editado con éxito la publicación " .'"'.$publicacion->title.'"')->error()->warning()->important();
+
+        return redirect()->route('Publicaciones.index');
     }
 
     /**
@@ -119,6 +136,11 @@ class PublicacionesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $publicacion = Publicacion::find($id);
+        $publicacion->delete();
+
+        flash("Se ha eliminado con éxito la publicación" .'"'.$publicacion->title.'"')->error()->important();
+
+        return redirect()->route('Publicaciones.index');
     }
 }

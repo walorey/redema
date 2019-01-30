@@ -61,7 +61,7 @@
     <li><a href="{{ route('Usuarios.index')}}">Usuarios</a></li>
     <li><a href="{{ route('Publicaciones.index')}}">Publicaciones</a></li>
     <li><a href="#">Comentarios</a></li>
-    <li><a href="#">Imagenes</a></li>
+    <li><a href="{{ route('Imagenes.index')}}">Imagenes</a></li>
     <li><a href="{{ route('Categorias.index')}}">Categorías</a></li>
     <li><a href="{{ route('Tags.index')}}">Tags</a></li>
   </ul>

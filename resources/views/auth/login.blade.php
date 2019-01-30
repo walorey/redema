@@ -29,7 +29,7 @@
   
 <div class="container">
 
-      <form class="form-signin"  method="POST" action="{{ route('login') }}">
+      <form class="form-signin"  method="POST" action="{{ route('auth.login') }}">
         <h2 class="form-signin-heading fuenteform">Iniciar Sesión en Reddema</h2>
         @csrf
         <label for="inputEmail" class="sr-only ">Email</label>

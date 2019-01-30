@@ -1,6 +1,14 @@
 body{
 	background-color:  #bdbdbd;
 }
+.boton-ver-todo{
+	color:#ffffff;
+}
+
+.boton-ver-todo:hover{
+	text-decoration: none;
+	color: #ffffff;
+}
 
 .boton-inicio{
 	color: #F5F5F5;
@@ -316,3 +324,46 @@ margin:auto;
 	margin: 10px;
 }
 
+.containerCarru {
+    background-color: #bdbdbd;
+    margin: 40px auto;
+    padding: 20px 40px 50px;
+    max-width: 960px;
+
+}
+
+ul.thumbnails { 
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  }
+
+.caption-box h4 {
+    font-size: 0.94rem;
+    color: #444;
+}
+.caption-box p {
+  font-size: 0.75rem;
+  color: #999;
+}
+.btn.btn-mini {
+font-size: 0.63rem;
+}
+
+.control-box {
+    width: 100%;
+  }
+.carousel-control{
+    background: #666 !important;
+    border: 0px;
+    border-radius: 0px;
+    display: inline-block;
+    font-size: 34px;
+    font-weight: 200;
+    line-height: 18px;
+    opacity: 0.5;
+    padding: 4px 10px;
+    margin: 30px -20px 0;
+    height: 30px;
+    width: 30px;
+    }

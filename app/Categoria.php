@@ -16,4 +16,9 @@ class Categoria extends Model
     {
     	return $this->hasMany('App\Publicacion');
     }
+
+    public function scopeBuscarCategoria($query, $name)
+    {
+    	return $query->where('name', '=', $name);
+    }
 }

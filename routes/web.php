@@ -11,9 +11,54 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');//no hace falta poner welcome.blade.php, si esta dentro de una carpeta se usa '.' en vez de '/' aunque tambien se puede
+//rutas front
+
+Route::get('/', [
+    'uses' => 'FrontController@index',
+    'as'   => '/'
+]);
+
+Route::get('/login',[
+
+	'uses'  => 'loginFrontController@showLoginForm',
+    'as'    => 'auth.login'
+
+]);
+
+Route::post('/login', [
+    'uses'  => 'loginFrontController@login',
+    'as'    => 'auth.login'
+]);
+
+Route::get('registrarse', function(){
+	return view('auth.register');
 });
+
+Route::get('/Publicaciones', [
+	'uses' => 'FrontController@index2',
+    'as'   => 'front.publicaciones.index'
+]);
+
+Route::get('Categorias/{name}', [
+	'uses' => 'FrontController@buscarCategoria',
+	'as'   => 'front.buscar.categoria'
+]);
+
+
+Route::get('Tag/{name}', [
+	'uses' => 'FrontController@buscarTag',
+	'as'   => 'front.buscar.tag'
+]);
+
+//este no funciona
+
+Route::post('/register',[
+	'uses' =>'Auth\RegisterController@validator',
+	'as'   =>'auth.register'
+]);
+
+//rutas admin
+
 
 Route::group(['prefix'=>'Admin', 'middleware'=>'auth'], function(){
 
@@ -38,6 +83,15 @@ Route::group(['prefix'=>'Admin', 'middleware'=>'auth'], function(){
 	]);
 
 	Route::resource('Publicaciones', 'PublicacionesController');
+	Route::get('Publicaciones/{id}/destroy', [
+		'uses' => 'PublicacionesController@destroy',
+		'as' => 'Publicaciones.destroy'
+	]);
+
+	Route::get('Imagenes',[
+		'uses' => 'ImagenesController@index',
+		'as' => 'Imagenes.index'
+	]);
 
 });
 

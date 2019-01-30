@@ -32,7 +32,7 @@
 
 		<div class="form-group">
 			{!! Form::label('tags', 'Tags') !!}
-			{!! Form::select('tags[]', $tags, null, ['class' => 'form-control select-tag', 'multiple', 'required']) !!}
+			{!! Form::select('tags[]', $tags, null, ['class' => 'form-control select-tag', 'multiple']) !!}
 		</div>
 
 		<button type="submit" class="btn btn-primary btn-lg btn-block">Publicar</button>

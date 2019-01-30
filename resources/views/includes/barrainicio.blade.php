@@ -8,11 +8,11 @@
     <ul class="nav navbar-nav navbar-right">
 
       <li class="nav-item ">
-        <button type="button" class="btn btn-info" style=" margin-top: 8px; margin-right: 5px;"><a class="nav-link boton-inicio" href="#">Iniciar Sesión</a></button>
+        <button type="button" class="btn btn-info" style=" margin-top: 8px; margin-right: 5px;"><a class="nav-link boton-inicio" href=" {{ route('auth.login')}}">Iniciar Sesión</a></button>
         
       </li>
       <li class="nav-item">
-        <button type="button" class="btn btn-success" style=" margin-top: 8px; margin-left: 5px;margin-right: 5px;"><a class="nav-link boton-inicio" href="#">Registrarse</a></button>
+        <button type="button" class="btn btn-success" style=" margin-top: 8px; margin-left: 5px;margin-right: 5px;"><a class="nav-link boton-inicio" href="/registrarse">Registrarse</a></button>
       </li>
     </ul>
   </div>

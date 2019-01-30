@@ -25,7 +25,7 @@
       
         <div class="container">
 
-              <form class="form-signin" method="POST" action="{{ route('register') }}">
+              <form class="form-signin" method="POST" action="{{ route('auth.register') }}">
                 <h2 class="form-signin-heading fuenteformr">Crear una cuenta en Reddema</h2>
 
                @csrf

@@ -14,7 +14,7 @@
 
   </head>
   <body class="body-inicio">
-  
+
   @include('includes.barrainicio')
 
 
@@ -33,7 +33,7 @@
   </div>
     <div class="row">
     <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <h1 class="hcentrado">Red de Mascotas!</h1>
+      <h1 class="hcentrado">Redo de Mascotas!</h1>
       
     </div>
   </div>
@@ -114,7 +114,6 @@
   <button type="button" class="btn btn-primary btn-lg btn-block"><a href="/Publicaciones" class="boton-ver-todo">Ver todo</a></button>
 </div><!-- /.container -->
 
-@include('front.partials.aside')
 
 @extends('includes.footer')
 
