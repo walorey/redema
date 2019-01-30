@@ -50,6 +50,7 @@ Route::get('Tag/{name}', [
 	'as'   => 'front.buscar.tag'
 ]);
 
+
 //este no funciona
 
 Route::post('/register',[

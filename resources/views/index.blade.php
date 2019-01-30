@@ -114,7 +114,6 @@
   <button type="button" class="btn btn-primary btn-lg btn-block"><a href="/Publicaciones" class="boton-ver-todo">Ver todo</a></button>
 </div><!-- /.container -->
 
-@include('front.partials.aside')
 
 @extends('includes.footer')
 

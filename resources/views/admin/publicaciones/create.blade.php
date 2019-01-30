@@ -12,8 +12,8 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('category_id', 'Categoría') !!}
-			{!! Form::select('category_id', $categorias, null, ['class' => 'form-control', 'placeholder' => 'Seleccione una opción', 'required']) !!}
+			{!! Form::label('categoria_id', 'Categoría') !!}
+			{!! Form::select('categoria_id', $categorias, null, ['class' => 'form-control', 'placeholder' => 'Seleccione una opción', 'required']) !!}
 		</div>
 
 		<div class="form-group">
@@ -26,9 +26,11 @@
 		  <!-- <input id="input-b3" name="input-b3[]" type="file" class="file" 
     data-show-upload="false" data-show-caption="true" data-msg-placeholder="Select {files} for upload..."> -->
 		  <!-- <input type="file" id="exampleInputFile" name="image" required> -->
-		  <input id="input-id" type="file" class="file" data-preview-file-type="text" name="image" >
+		  <input id="input-id" type="file" class="file" data-preview-file-type="text" name="imagen" >
 		  <!-- <p class="help-block">Example block-level help text here.</p> -->
 		</div>
+
+
 
 		<div class="form-group">
 			{!! Form::label('tags', 'Tags') !!}
@@ -49,5 +51,19 @@
 	// initialize with defaults
 	$("#input-id").fileinput();
 	$("#input-id").fileinput({'showUpload':false, 'previewFileType':'any'});
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+      $(".btn-success").click(function(){ 
+          var html = $(".clone").html();
+          $(".increment").after(html);
+      });
+      $("body").on("click",".btn-danger",function(){ 
+          $(this).parents(".control-group").remove();
+      });
+    });
+
 </script>
 @endsection

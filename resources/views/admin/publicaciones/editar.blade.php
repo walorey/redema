@@ -12,8 +12,8 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('category_id', 'Categoría') !!}
-			{!! Form::select('category_id', $categorias, $publicacion->categoria->id, ['class' => 'form-control', 'placeholder' => 'Seleccione una opción', 'required']) !!}
+			{!! Form::label('categoria_id', 'Categoría') !!}
+			{!! Form::select('categoria_id', $categorias, $publicacion->categoria->id, ['class' => 'form-control', 'placeholder' => 'Seleccione una opción', 'required']) !!}
 		</div>
 
 		<div class="form-group">
@@ -21,6 +21,12 @@
 			{!! Form::textarea('content', $publicacion->content, ['class' => 'form-control'])!!}
 
 		</div>	
+		<div class="form-group">
+			  <img src="{{asset('/img/publicaciones/'.$publicacion->imagen)}}" width="100px" height="100px" class="img-fit-cover" alt="">
+		</div>
+		<div class="form-group">
+				<input id="input-id" type="file" class="file" data-preview-file-type="text" name="imagen" >
+		</div>
 
 		<div class="form-group">
 			{!! Form::label('tags', 'Tags') !!}

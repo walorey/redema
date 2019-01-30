@@ -25,9 +25,9 @@ class PublicacionRequest extends FormRequest
     {
         return [
             'title'       => 'min:6|max:250|required',
-            'category_id' => 'required',
+            'categoria_id' => 'required',
             'content'     => 'min:10|required',
-            'image'       => 'image|required'
+            'imagen'       => 'image|required'
         ];
     }
 }

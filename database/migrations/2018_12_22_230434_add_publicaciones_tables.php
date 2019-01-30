@@ -18,9 +18,9 @@ class AddPublicacionesTables extends Migration
             $table->string('title',100);
             $table->text('content');
             $table->integer('user_id')->unsigned();
-            $table->integer('category_id')->unsigned();
+            $table->integer('categoria_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');//ondelete es para que se borre todo lo del usuario si este es eliminado
-            $table->foreign('category_id')->references('id')->on('categorias')->onDelete('cascade');
+            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
             $table->timestamps();
         });
     }

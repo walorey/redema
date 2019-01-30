@@ -11,14 +11,14 @@ class Publicacion extends Model
 
     protected $table = "publicaciones";
 
-    protected $fillable = ['title','content','category_id','user_id'];
+    protected $fillable = ['title','content','categoria_id','user_id', 'imagen'];
 
     //RELACIONES
-    //como es una relacion uno con muchos, el uno seria la categoria por eso la funcion se llama categoria en singular
+    //como es una relacion uno con muchos, el uno seria la categoria por eso la funcion se llama categoria en singular xd
 
     public function categoria()
     {	//como segundo parametro se pone la llave foranea
-    	return $this->belongsTo('App\Categoria','category_id');
+    	return $this->belongsTo('App\Categoria');
     }
 
     public function usuario()

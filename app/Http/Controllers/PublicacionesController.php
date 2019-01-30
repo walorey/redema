@@ -49,26 +49,30 @@ class PublicacionesController extends Controller
      */
     public function store(PublicacionRequest $request)//$request es todo lo que recibo del formulario
     {   
+        $publicacion = new Publicacion($request->all());
+        $publicacion->user_id = \Auth::user()->id;
+       
+
         //Manipulacion de imagen
-        if ($request->file('image'))
+        if ($request->file('imagen'))
         {
-            $file = $request->file('image');
+            $file = $request->file('imagen');
             $name = 'reddema.imagen_' . time() . '.' . $file->getClientOriginalExtension();
             $path = public_path(). '/img/publicaciones/';
             $file->move($path, $name);
+            $publicacion->imagen = $name;
+            $publicacion->save();
         }
 
-        $publicacion = new Publicacion($request->all());
-        $publicacion->user_id = \Auth::user()->id;
-        $publicacion->save();
+        // add multiple image to the publicacion. xd
+     /*
+
+           }
+        }
+     */
 
         //ahora puedo rellenar la tabla pibote (tags)
         $publicacion->tags()->sync($request->tags);
-
-        $image = new Imagen();
-        $image->name = $name;
-        $image->publicacion()->associate($publicacion);
-        $image->save();
 
         flash("Se ha publicado con éxito la publicación" .' '.$publicacion->title)->success()->important();
 
@@ -119,7 +123,21 @@ class PublicacionesController extends Controller
     {
         $publicacion = Publicacion::find($id);
         $publicacion->fill($request->all());
-        $publicacion->save();
+         if ($request->file('imagen'))
+        {
+            $path = public_path(). '/img/publicaciones/';
+            $file->unlink($path, $publicacion->imagen);
+
+            $file = $request->file('imagen');
+            $name = 'reddema.imagen_' . time() . '.' . $file->getClientOriginalExtension();
+            $file->move($path, $name);
+            $publicacion->imagen = $name;
+            $publicacion->save();
+        
+        }else{
+            $publicacion->save();
+        }
+
 
         $publicacion->tags()->sync($request->tags);
 
